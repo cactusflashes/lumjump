@@ -28,7 +28,6 @@ let intervalID;
 
 let gameState = 'start';
 let obstacle; 
-let obstacleTwo; 
 
 
 const obsg = [
@@ -65,18 +64,8 @@ function generateObs() {
     } 
 }
 
-function generateObsTwo() {
-    if (gameState === "playing") {
-        src = randObs(); 
-       const randPTwo = Math.random() * 10;
-       obstacleTwo.style.top = `${randPTwo}vh`
-    } else if (gameState === 'start' || gameState === 'over') {
-        src = ghost; 
-    } 
-}
 
 setInterval(generateObs, 3200);
-setInterval(generateObsTwo, 3800);
 
 function startGame() {
     
@@ -90,7 +79,6 @@ function startGame() {
     velocity = 0;
     startTimer();
     generateObs();
-    generateObsTwo();
     randObs();
     update();
 }
@@ -195,7 +183,6 @@ onMount(() => {
 
         <!-- svelte-ignore a11y-missing-attribute -->
         <img class="obs" {src} alt=" " bind:this={obstacle}/>
-        <img class="obs-2" {src} alt=" " bind:this={obstacleTwo}/>
 
 
 
