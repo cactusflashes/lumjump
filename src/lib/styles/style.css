@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+        margin: 0; 
+        padding: 0; 
+        overflow: hidden;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('$lib/assets/px-bg-01.svg');
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 350%;
+    animation: background-scroll 3600s linear infinite;
+    align-items: center;
+    justify-content: center;
+    transform-origin: center;
+  }
+  
+  @keyframes background-scroll {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 55000% 0;
+    }
+}
+
+  .lum {
+    display: flex; 
+    width: 100px;
+    height: 100px;
+    transform-origin: center;
+    transition: transform 0.2s;
+    position: absolute;    
+    left: 100px; 
+  }
+
+  .ataru {
+    display: flex;
+    width: 100px; 
+    height: 100px;
+    position: absolute;
+    bottom: 98%;
+    right: 10vw;
+    z-index: 1;
+  }
+
+  .ground {
+    display: flex;  
+    flex-direction: column-reverse;
+    background-image: url('$lib/assets/ground-01.svg');
+    height: 100%;
+    width: 100%;
+    background-repeat: repeat;
+    background-position: 0 0;
+    background-size: 120%;
+    animation: background-scroll 150s linear infinite;
+    pointer-events: none;
+    position: absolute;
+    top: 80vh;
+
+  }
+
+  .start-game {
+    display: flex; 
+    flex-direction: column;
+    height: 100vh; 
+    width: 100vw;
+  }
+
+  h1 {
+    font-family: 'Press Start 2P';
+    font-size: 5vw;
+    color: #ebb434; 
+    position: absolute;
+    top: 10vh;
+  }
+
+  h2 {
+    font-family: 'Press Start 2P';
+    font-size: 4vw;
+    color: #ebb434; 
+    position: absolute;
+    top: 1vh;
+    left: 4vw;
+  }
+
+  h3 {
+    font-family: 'Press Start 2P';
+    font-size: 4vw;
+    color: #ebb434; 
+  }
+
+  .game-over {
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    align-self: center;
+    background-color: rgba(37, 67, 156, .8);
+    height: 450px;
+    width: 300px;
+    margin-top: -10vh;
+    border-radius: 5vw;
+  }
+
+  .again-btn {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    height: 40px; 
+    width: 220px;
+    background-color: transparent;
+    border: 2px solid #ebb434;
+    color: #ebb434;
+    font-family: 'Press Start 2P';
+    margin-top: 50px;
+  }
+
+.obs {
+    display: flex; 
+    height: 80px; 
+    width: 80px;
+    margin: 0; 
+    padding: 0; 
+    left: 100vw;
+    position: relative; 
+    transition: top 2s linear; 
+}
+
+.obs-2 {
+    display: flex; 
+    height: 80px; 
+    width: 80px;
+    margin: 0; 
+    padding: 0; 
+    left: 100vw;
+    position: relative; 
+    transition: top 3s linear; 
+}
+
+@keyframes scroll-left {
+    from {
+        left: 100vw; 
+    }
+    to {
+        left: -100vw; 
+    }
+}
+
+.scroll-enabled {
+  animation: scroll-left 3s linear infinite; 
+}
+
+.scroll-enabled-2 {
+  animation: scroll-left 3.8s linear infinite; 
+}
