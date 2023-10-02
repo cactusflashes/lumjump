@@ -64,14 +64,12 @@ function generateObs() {
     } 
 }
 
-
 setInterval(generateObs, 3200);
 
 function startGame() {
     
     gameState = 'playing';
     obstacle.classList.add('scroll-enabled');
-    obstacleTwo.classList.add('scroll-enabled-2'); 
     lum.classList.remove('animate__animated'); // Remove lum's flying animation in start mode
     lum.style.display = 'flex';
     ataru.style.display = 'flex';
